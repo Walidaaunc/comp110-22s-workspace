@@ -42,5 +42,5 @@ if Count != 0:
         str(Count)
         print(str(Count) + " instances of " + Character + " found in " + Word)
 else:
-    Count1 = "No"
+    Count1: str = "No"
     print(str(Count1) + " instances of " + Character + " found in " + Word)
