@@ -2,45 +2,45 @@
 
 __author__ = "730507751"
 
-word: str = input("Enter a 5-character word: ")
+Word: str = input("Enter a 5-character word: ")
 
-if len(word) != 5:
+if len(Word) != 5:
     print("Error: Word must contain 5 characters")
     exit()
 
-character: str = input("Enter a single character: ")
+Character: str = input("Enter a single character: ")
 
-if len(character) != 1:
+if len(Character) != 1:
     print("Error: Character must be a single character.")
     exit()
 
-print("Searching for " + character + " in hello")
+print("Searching for " + Character + " in " + Word)
 
-count: int = 0
+Count: int = 0
 
-if character == word[0]:
-    print(character + " found at index 0")
-    count = count + 1
-if character == word[1]:
-    print(character + " found at index 1")
-    count = count + 1
-if character == word[2]:
-    print(character + " found at index 2")
-    count = count + 1
-if character == word[3]:
-    print(character + " found at index 3")
-    count = count + 1
-if character == word[4]:
-    print(character + " found at index 4")
-    count = count + 1
+if Character == Word[0]:
+    print(Character + " found at index 0")
+    Count = Count + 1
+if Character == Word[1]:
+    print(Character + " found at index 1")
+    Count = Count + 1
+if Character == Word[2]:
+    print(Character + " found at index 2")
+    Count = Count + 1
+if Character == Word[3]:
+    print(Character + " found at index 3")
+    Count = Count + 1
+if Character == Word[4]:
+    print(Character + " found at index 4")
+    Count = Count + 1
 
-if count != 0:
-    str(count)
-    if count == 1:
-        print(str(count) + " instance of " + character + " found in " + word)
+if Count != 0:
+    if Count == 1:
+        str(Count)
+        print(str(Count) + " instance of " + Character + " found in " + Word)
     else:
-        print(str(count) + " instances of " + character + " found in " + word)
+        str(Count)
+        print(str(Count) + " instances of " + Character + " found in " + Word)
 else:
-    str(count) 
-    count1 = "No"
-    print(str(count1) + " instances of " + character + " found in " + word)
+    Count1 = "No"
+    print(str(Count1) + " instances of " + Character + " found in " + Word)
