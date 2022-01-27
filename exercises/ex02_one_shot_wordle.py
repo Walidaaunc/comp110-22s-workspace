@@ -20,7 +20,7 @@ while i < len(secret_word):
         t_or_f_variable: bool = False
         alternate_i: int = 0
         while t_or_f_variable is not True and alternate_i < len(secret_word):
-            t_or_f_variable = users_word[i] == secret_word[alternate_i]
+            t_or_f_variable = (users_word[i] == secret_word[alternate_i])
             alternate_i = alternate_i + 1
         if t_or_f_variable is True:
             screen_display = screen_display + YELLOW_BOX
