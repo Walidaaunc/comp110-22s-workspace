@@ -46,15 +46,15 @@ def input_guess(expected_length: int) -> str:
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
-    the_secret: str = "codes"
+    the_secret_word: str = "codes"
     turns_played_by_user: int = 1
     the_user_won: bool = False
     users_input: str = ""
     while turns_played_by_user < 7 and the_user_won is not True:
         print("=== Turn " + str(turns_played_by_user) + "/6 ===")
         users_input = input_guess(5)
-        print(emojified(users_input, the_secret))
-        if users_input == the_secret:
+        print(emojified(users_input, the_secret_word))
+        if users_input == the_secret_word:
             the_user_won = True
             print("You won in " + str(turns_played_by_user) + "/6 turns!")
         turns_played_by_user += 1
