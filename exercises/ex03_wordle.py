@@ -20,17 +20,17 @@ def emojified(guessed_string: str, the_secret_string: str) -> str:
     """Returns string of emoji whose color codifies green, yellow or white boxes."""
     assert len(guessed_string) == len(the_secret_string)
     i: int = 0
-    WHITE_BOX: str = "\U00002B1C"
-    GREEN_BOX: str = "\U0001F7E9"
-    YELLOW_BOX: str = "\U0001F7E8"
+    white_box: str = "\U00002B1C"
+    green_box: str = "\U0001F7E9"
+    yellow_box: str = "\U0001F7E8"
     display_screen: str = ""
     while i < len(the_secret_string):
         if guessed_string[i] == the_secret_string[i]:
-            display_screen = display_screen + GREEN_BOX
+            display_screen = display_screen + green_box
         elif contains_char(the_secret_string, guessed_string[i]) is True:
-            display_screen = display_screen + YELLOW_BOX
+            display_screen = display_screen + yellow_box
         else:
-            display_screen = display_screen + WHITE_BOX
+            display_screen = display_screen + white_box
         i = i + 1
     return display_screen
 
