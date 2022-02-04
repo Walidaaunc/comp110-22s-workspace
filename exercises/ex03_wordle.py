@@ -40,7 +40,7 @@ def input_guess(expected_length: int) -> str:
     stored_value: int = expected_length
     given_string: str = input("Enter a " + str(stored_value) + " character word: ")
     while len(given_string) != stored_value:
-        given_string: str = input("That wasn't " + str(stored_value) + " chars! Try again: ")
+        given_string = input("That wasn't " + str(stored_value) + " chars! Try again: ")
     return given_string
 
 
