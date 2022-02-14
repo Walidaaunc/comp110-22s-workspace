@@ -37,7 +37,7 @@ def draw_hexagon(the_turtle: Turtle, x: float, y: float, width: float, the_color
 
 
 def draw_circle(the_turtle: Turtle, x: float, y: float, radius: int, the_color_of_the_shape: str, the_fill_color: str) -> None:
-    """Draws a circle of the given radius and colors in the given x, y coordinates; calls the simplified_function."""
+    """Draws a circle, using the circle function, of the given radius and colors in the given x, y coordinates; calls the simplified_function."""
     simplified_function(the_turtle, x, y, the_color_of_the_shape, the_fill_color)
     the_turtle.begin_fill()
     the_turtle.circle(radius)
