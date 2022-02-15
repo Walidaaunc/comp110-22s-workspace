@@ -1,4 +1,4 @@
-"""Attempting to draw a face!"""
+"""Attempting to draw my niece and his two favorite teddy bears!"""
 __author__ = "730507751"
 from turtle import Turtle, colormode, done
 
@@ -55,25 +55,66 @@ def main() -> None:
     bob_the_turtle: Turtle = Turtle()
     colormode(255)
     bob_the_turtle.color(99, 204, 250)
-    bob_the_turtle.speed(50)
-    """Draws a face!"""
+    bob_the_turtle.speed(150)
+
+    """Draws my niece's face!"""
     draw_circle(bob_the_turtle, 0.0, 0.0, 100, "black", "pink")
     i: int = 0
     while i < 2:
         if i == 0:
-            """Draws the left eye!"""
+            """Draws my niece's left eye!"""
             draw_hexagon(bob_the_turtle, -55.0, 120.0, 20, "black", "white")
             draw_circle(bob_the_turtle, -52.0, 125.0, 5, "black", "blue")
             i += 1
         elif i == 1:
-            """Draws the right eye!"""
+            """Draws my niece's right eye!"""
             draw_hexagon(bob_the_turtle, 35.0, 120.0, 20, "black", "white")
             draw_circle(bob_the_turtle, 38.0, 125.0, 5, "black", "blue")
             i += 1
-    """Draws the nose!"""
+    """Draws my niece's nose!"""
     draw_triangle(bob_the_turtle, -10.0, 95.0, 15, "black", "black")
-    """Draws a content mouth!"""
+    """Draws my niece's mouth!"""
     draw_line(bob_the_turtle, -55.0, 50.0, 110, "black")
+    
+    i = 0
+    while i < 2:
+        if i == 0:
+            """Draws the first's teddy bear's face!"""
+            draw_circle(bob_the_turtle, -200.0, -65.0, 40, "black", "brown")
+            """Draws the first's teddy bear's left ear!"""
+            draw_circle(bob_the_turtle, -235.0, -5.0, 15, "black", "brown")
+            """Draws the first's teddy bear's right ear!"""
+            draw_circle(bob_the_turtle, -165.0, -5.0, 15, "black", "brown")
+            """Draws the first's teddy bear's left eye!"""
+            draw_circle(bob_the_turtle, -218.0, -25.0, 8, "black", "")
+            draw_circle(bob_the_turtle, -218.0, -23.0, 4, "black", "black")
+            """Draws the first's teddy bear's right eye!"""
+            draw_circle(bob_the_turtle, -182.0, -25.0, 8, "black", "")
+            draw_circle(bob_the_turtle, -182.0, -23.0, 4, "black", "black")
+            """Draws the first's teddy bear's nose!"""
+            draw_circle(bob_the_turtle, -200.0, -45.0, 5, "black", "black")
+            """Draws the first's teddy bear's mouth!"""
+            draw_line(bob_the_turtle, -218.0, -52.0, 35, "black")
+            i += 1
+        elif i == 1:
+            """Draws the second's teddy bear's face!"""
+            draw_circle(bob_the_turtle, 200.0, -65.0, 40, "black", "brown")
+            """Draws the second's teddy bear's left ear!"""
+            draw_circle(bob_the_turtle, 235.0, -5.0, 15, "black", "brown")
+            """Draws the second's teddy bear's left ear!"""
+            draw_circle(bob_the_turtle, 165.0, -5.0, 15, "black", "brown")
+            """Draws the second's teddy bear's left eye!"""
+            draw_circle(bob_the_turtle, 182.0, -25.0, 8, "black", "")
+            draw_circle(bob_the_turtle, 182.0, -23.0, 4, "black", "black")
+            """Draws the second's teddy bear's right eye!"""
+            draw_circle(bob_the_turtle, 218.0, -25.0, 8, "black", "")
+            draw_circle(bob_the_turtle, 218.0, -23.0, 4, "black", "black")
+            """Draws the second's teddy bear's nose!"""
+            draw_circle(bob_the_turtle, 200.0, -45.0, 5, "black", "black")
+            """Draws the second's teddy bear's mouth!"""
+            draw_line(bob_the_turtle, 184.0, -52.0, 35, "black")
+            i += 1
+    
     """Hides the turtle."""
     bob_the_turtle.hideturtle()
     done()
