@@ -40,12 +40,6 @@ def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
 def head(table: dict[str, list[str]], N: int) -> dict[str, list[str]]:
     """Produces a new column-based table with only the first `N` rows of data for each column."""
     result: dict[str, list[str]] = dict()
-    res = next(iter(table))
-    for column in table[res]:
-        wanted_list: list[int] = list()
-        for value in column:
-            result[value] = wanted_list.append(N)
-        print(wanted_list)
     return result
 
 
