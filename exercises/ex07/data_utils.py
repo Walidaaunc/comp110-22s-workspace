@@ -43,6 +43,8 @@ def head(table: dict[str, list[str]], N: int) -> dict[str, list[str]]:
     for column in table:
         empty_list: list[str] = list()
         count: int = 0
+        if N >= len(table):
+            N = len(table)
         while count < N:
             empty_list.append(table[column][count])
             count += 1
