@@ -85,4 +85,5 @@ def count(values: list[str]) -> dict[str, int]:
     
 
 def sorted_dictionary(a: dict[str, int]) -> list[tuple[str, int]]:
+    """Sorts a dictionary starting from the smallest key to the largest."""
     return sorted(a.items())
