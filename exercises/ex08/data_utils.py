@@ -82,3 +82,7 @@ def count(values: list[str]) -> dict[str, int]:
         else:
             result[value] = 1
     return result
+    
+
+def sorted_dictionary(a: dict[str, int]) -> list[tuple[str, int]]:
+    return sorted(a.items())
