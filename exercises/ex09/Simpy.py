@@ -28,7 +28,7 @@ class Simpy:
             i += 1
         self.values = new_list
     
-    def arange(self, start: float, stop: float, step=1.0) -> None:
+    def arange(self, start: float, stop: float, step: float = 1.0) -> None:
         """Fills in the values attribute with range of values."""
         if step != 1.0:
             index: float = step
