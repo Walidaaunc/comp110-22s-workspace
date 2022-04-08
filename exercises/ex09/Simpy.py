@@ -8,6 +8,7 @@ __author__ = "730507751"
 
 
 class Simpy:
+    """Helpful for working with sequences of numerical data."""
     values: list[float]
 
     def __init__(self, a: list[float]):
@@ -27,11 +28,13 @@ class Simpy:
             i += 1
         self.values = new_list
     
-    def arange(self, start: float, stop: float, step = 1.0) -> None:
-        if step != 1.0:
+    def arange(self, start: float, stop: float, step=None) -> None:
+        """Fills in the values attribute with range of values."""
+        if step is not None:
             index: float = step
         else:
-            index: float = 1.0
+            step = 1.0
+            index: float = step
         new_list: list[float] = list()
         if stop > 0.0:
             while start < stop:
@@ -45,9 +48,11 @@ class Simpy:
             self.values = new_list
     
     def sum(self) -> float:
+        """Computes and returns the sum of all items in the values attribute."""
         return sum(self.values)
     
     def __add__(self, rhs: Union[float, Simpy]) -> Simpy:
+        """Default parameter of the addition operator."""
         if isinstance(rhs, Simpy):
             if len(self.values) == len(rhs.values):
                 new_simpy_object: Simpy
@@ -75,6 +80,7 @@ class Simpy:
             return new_simpy_object
     
     def __pow__(self, rhs: Union[float, Simpy]) -> Simpy:
+        """Default parameter of the exponentiation operator."""
         if isinstance(rhs, Simpy):
             if len(self.values) == len(rhs.values):
                 new_simpy_object: Simpy
@@ -102,6 +108,7 @@ class Simpy:
             return new_simpy_object
     
     def __eq__(self, rhs: Union[float, Simpy]) -> list[bool]:
+        """Produces a mask based on the equality of each item in the values attribute."""
         if isinstance(rhs, Simpy):
             new_list: list[bool] = list()
             i: int = 0
@@ -123,6 +130,7 @@ class Simpy:
             return new_list
     
     def __gt__(self, rhs: Union[float, Simpy]) -> list[bool]:
+        """Produces a mask based on the greater than relationship between each item in the values attribute."""
         if isinstance(rhs, Simpy):
             new_list: list[bool] = list()
             i: int = 0
@@ -147,6 +155,7 @@ class Simpy:
             return new_list
     
     def __getitem__(self, rhs: Union[int, list[bool]]) -> Union[float, Simpy]:
+        """Allows you to employ the subscription operator on individual items and/or be able to filter with a mask."""
         if isinstance(rhs, int):
             if len(self.values) > rhs:
                 return self.values[rhs]
