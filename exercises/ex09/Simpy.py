@@ -28,12 +28,11 @@ class Simpy:
             i += 1
         self.values = new_list
     
-    def arange(self, start: float, stop: float, step=None) -> None:
+    def arange(self, start: float, stop: float, step=1.0) -> None:
         """Fills in the values attribute with range of values."""
-        if step is not None:
+        if step != 1.0:
             index: float = step
         else:
-            step = 1.0
             index: float = step
         new_list: list[float] = list()
         if stop > 0.0:
